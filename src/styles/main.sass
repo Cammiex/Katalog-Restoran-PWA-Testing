@@ -1,0 +1,486 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap")
+
+:root
+  --primary-color: #435334
+  --secondary-color: #b5d691
+  --third-color: #9eb384
+  --fourth-color: #435334
+
+* 
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+body 
+  font-family: "Roboto", sans-serif
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+main
+  flex-grow: 1
+  width: 100%
+  margin: 68px 0 auto
+
+.skip-link 
+  position: absolute
+  top: -80px
+  left: 0
+  padding: 8px
+  background-color: var(--third-color)
+  color: white
+  z-index: 100
+  text-decoration: none
+
+  &:focus 
+    top: 0
+
+header 
+  background-color: var(--secondary-color)
+
+.content 
+  padding: 40px 40px
+
+.restaurant 
+  width: 100%
+  text-align: center
+  background-color: white
+
+  .restaurant-label 
+    font-size: 32px
+    font-weight: 600
+    margin-bottom: 20px
+    font-family: "Playfair Display", serif
+    color: var(--secondary-color)
+
+    &::after 
+      content: ""
+      margin-top: 16px
+      display: block
+      border-bottom: 2px solid #9c938b
+
+  restaurant-list 
+    margin: 32px auto auto
+    text-align: left
+    display: grid
+    grid-row-gap: 12px
+
+    restaurant-item 
+      width: 100%
+      border-radius: 5px
+      margin-bottom: 4em
+      overflow: visible
+      position: relative
+
+      img 
+        width: 100%
+        max-height: 270px
+        border-radius: 1em
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+
+      .restaurant-title a
+        text-decoration: none 
+        font-size: 1rem
+        font-weight: 600
+        margin: 0
+        color: #653b24
+        min-width: 44px
+        min-height: 44px
+        display: flex
+        justify-content: center
+        align-items: center
+
+        &:hover 
+          color: var(--primary-color)
+
+      .restaurant-layer
+        padding: 16px
+        position: absolute
+        bottom: -40px
+        left: 50%
+        transform: translateX(-50%)
+        width: 100%
+        background-color: white
+        z-index: 1
+        font-size: 0.9rem
+        border-radius: 1em
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+
+        .info-top 
+          display: flex
+          justify-content: space-between
+          align-items: center
+          margin-bottom: 0.5em
+
+          .restaurant-rating 
+            padding: 3px
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2)
+            border-radius: 5px
+
+            &::before
+              color: #ffd700 
+              content: "\2605"
+              margin-right: 0.2em
+
+.restaurant-header
+  margin: 0 auto
+  padding: 2em 0 4em
+  display: flex
+  flex-direction: column
+  align-items: center
+  text-align: center
+  max-width: 800px
+  
+
+.detail-header
+  text-align: center
+  padding: 5px
+
+.detail-title
+  margin-bottom: 8px
+  font-size: 32px
+  font-family: "Playfair Display", serif
+
+.image-container
+  position: relative
+
+  img
+    margin: 0 auto
+    border-radius: 2em
+    width: 100%
+    padding: 1em
+    display: block
+    
+
+.detail-rating
+  background-color: var(--secondary-color)
+  border-radius: 50%
+  color: white
+  font-size: 16px
+  padding: 5px 10px
+  text-align: center
+  position: absolute
+  bottom: 50px
+  right: -5px
+  width: 50px
+  height: 50px
+  display: flex
+  justify-content: center
+  align-items: center
+
+  p::before
+    content: "\2605"
+    color: #ffd700
+    margin-right: 0.2em
+
+.detail-description
+  padding: 0 10px
+  text-align: left
+  width: 100%
+  font-size: 12px
+
+  h2
+    font-size: 18px
+    margin-bottom: 7px
+
+.restaurant-menu
+  background-color: white
+  text-align: center
+  padding: 4em 0
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.menu-title
+  margin-bottom: 10px
+  font-size: 32px
+  font-family: "Playfair Display", serif
+  order: 1
+
+.menu-container
+  display: flex
+  flex-direction: column
+  gap: 20px
+  order: 2
+  margin-top: 10px
+  padding: 10px
+
+.menu-section
+  padding: 20px 50px 15px 50px
+  width: 100%
+  text-align: center
+  background-color: white
+  border: 1px solid var(--primary-color)
+  border-radius: 0.5em
+
+  h4
+    margin-top: 0
+    font-size: 20px
+
+  ul
+    padding: 10px
+
+  li
+    padding: 8px
+
+  i
+    color: var(--primary-color)
+
+  i
+    margin-right: 8px
+
+.restaurant-review
+  text-align: center
+  padding: 4em 0
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.restaurant-review h3
+  font-size: 32px
+  margin-bottom: 20px
+  font-family: "Playfair Display", serif
+
+.review-container
+  display: grid
+  gap: 20px
+  padding: 15px
+  max-width: 1200px
+  margin: 0 auto
+
+.review-item
+  width: 100%
+  background-color: white
+  border: 1px solid var(--primary-color)
+  border-radius: 1em
+  padding: 20px 13px
+  text-align: left
+  margin-bottom: 20px
+  display: inline-block
+
+.review-header
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.review-header strong
+  color: var(--primary-color)
+  font-weight: bold
+
+.review-header p:nth-child(2)
+  color: #9c938b
+  font-size: 14px
+
+.review-content p
+  margin: 0
+
+.review-item p:last-child
+  margin-top: 7px
+
+.add-header
+  text-align: center
+  color: var(--third-color)
+  margin-bottom: 5px
+  font-size: 18px
+
+.form-container
+  padding: 15px
+
+.form-item
+  min-width: 50%
+  background-color: white
+  border: 1px solid var(--primary-color)
+  border-radius: 1em
+  padding: 20px 13px
+  text-align: left
+  display: inline-block
+
+form
+  max-width: 400px
+  margin: 0 auto
+  padding: 20px
+  border-radius: 10px
+
+form label
+  display: block
+  margin-bottom: 5px
+
+form input[type="text"],
+form input[type="date"],
+form textarea
+  width: 100%
+  padding: 10px
+  margin-bottom: 15px
+  border: 1px solid #9c938b
+  border-radius: 0.5em
+  font-size: 16px
+  min-width: 44px
+  min-height: 44px
+
+form textarea
+  height: 70px
+
+.form-item form button
+  font-family: "Roboto", sans-serif
+  width: 100%
+  border: none
+  border-radius: 2em
+  margin-top: 10px
+  padding: 10px 20px
+  cursor: pointer
+  text-transform: uppercase
+  color: white
+  border: none
+  background-color: var(--primary-color)
+  transition: opacity 0.3s
+  min-width: 44px
+  min-height: 44px
+
+.form-item form button:hover
+  border: 2px solid black
+
+.story 
+  justify-content: center
+  padding: 80px 40px 60px
+  text-align: center
+  background-color: var(--third-color)
+  color: var(--secondary-color)
+
+  img 
+    width: 100%
+    border-radius: 1em
+
+  .story-content 
+    width: 100%
+    padding: 16px 0
+
+  .story-title 
+    font-size: 32px
+    font-weight: 600
+    font-family: "Playfair Display", serif
+
+  .story-description 
+    font-size: 15px
+    margin-top: 12px
+
+  .story-button 
+    font-family: "Roboto", sans-serif
+    text-transform: uppercase
+    margin-top: 24px
+    cursor: pointer
+    padding: 8px 16px
+    color: white
+    border: none
+    border-radius: 5px
+    background-color: var(--primary-color)
+    transition: opacity 0.3s
+    min-width: 44px
+    min-height: 44px
+
+    &:hover 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5)
+      transform: translateY(-2px)
+
+.like
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  background-color: transparent
+  position: fixed
+  bottom: 13px
+  right: 13px
+  border-radius: 0.7em
+  background-color: #fff
+  border: 0
+  padding: 1px
+  font-size: 18px
+  font-weight: bold
+  color: red
+  cursor: pointer
+  font-family: "Roboto", sans-serif
+
+  & i
+    font-size: 26px
+    min-width: 44px
+    min-height: 44px
+    display: flex
+    align-items: center
+    justify-content: center
+
+  & .button-text
+    font-size: 18px
+    color: #171816
+    padding-right: 6px
+
+footer 
+  background-color: var(--secondary-color)
+  padding: 1.5em
+  flex-shrink: 0
+
+  p 
+    text-align: center
+    color: white
+  
+  span 
+    color: var(--primary-color)
+
+@media screen and (min-width: 455px)
+  .story-content
+    padding: 16px 16px
+
+  .story-description
+    font-size: 16px
+
+  .detail-description
+    font-size: 16px
+
+@media screen and (min-width: 650px)
+  .story-content
+    margin: 0 auto
+    max-width: 650px
+
+  .detail-rating
+    font-size: 20px
+    padding: 10px 20px
+    bottom: 60px
+    right: -20px
+    width: 70px
+    height: 70px
+
+@media screen and (min-width: 700px)
+  restaurant-list
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-row-gap: 16px
+    grid-column-gap: 20px
+
+  .story img
+    max-width: 600px
+
+  .menu-container 
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 20px
+
+  .menu-section 
+    width: auto
+
+  .review-container
+    grid-template-columns: 1fr 1fr
+
+@media screen and (min-width: 900px)
+  restaurant-list
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+
+  .story
+    display: grid
+    grid-template-columns: 1fr 1fr
+    align-items: center
+
+  .story-content
+    padding: 16px 32px
+    order: 1
+
+  .story img
+    order: 2
